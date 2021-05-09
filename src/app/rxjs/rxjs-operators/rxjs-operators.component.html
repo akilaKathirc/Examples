@@ -1,0 +1,38 @@
+<div class="combineAll">
+    <button (click)="combineAll()">Combine All</button>
+
+    <button (click)="share()">Share</button>
+
+    <button (click)="shareReplay()">shareReplay</button>
+    <button (click)="ReplaySubject()">ReplaySubject</button>
+
+    <button (click)="switchMapfunc()">switchMap</button>
+
+
+    <button (click)="mergeMapFunc()">MergeMap</button>
+    <button (click)="forkJoinFunc()">Fork Join</button>
+    <button (click)="combineLatestFunc()">Combine Latest</button>
+
+
+    <div class="combineLatest">
+        <button class="btn" id="red">Red</button>
+        <button class="btn" id="black">Black</button>
+    </div>
+    <div class="totalSpan">
+        <div>Red :<span id="red-total"></span></div>
+
+        <div>Black : <span id="black-total"></span></div>
+
+        <div>Total : <span id="total"></span></div>
+    </div>
+
+
+
+    <hr>
+    <ul>
+        <li *ngFor="let item of combinealloutput">
+            {{item}}
+        </li>
+    </ul>
+
+</div>

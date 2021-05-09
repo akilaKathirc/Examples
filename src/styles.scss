@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montez&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,900&display=swap");
+@import "./app/scss/variable";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: "Nunito";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --clr-neon: hsl(317, 100%, 54%);
+  --clr-bg: hsl(323, 21%, 61%);
+  --clr-bg-dark: hsl(323, 21%, 16%);
+}
+
+@mixin bgcolor($property, $property2) {
+  background: linear-gradient(to right, $property 10%, $property2 100%);
+}
+
+body {
+  scroll-behavior: smooth;
+  overflow: scroll;
+  @include bgcolor($base-color-dark, $bg-color-pink);
+}
