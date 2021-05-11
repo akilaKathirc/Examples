@@ -21,7 +21,6 @@ export enum TodoActionTypes {
 
 export class GetTodo implements Action {
     readonly type: string = TodoActionTypes.GET_TODO;
-
 }
 
 export class GetTodoSuccess implements Action {
@@ -36,7 +35,6 @@ export class GetTodoFailure implements Action {
 export class AddTodo implements Action {
     readonly type: string = TodoActionTypes.ADD_TODO;
     constructor(public payload: { todotitle: string }) { }
-
 }
 
 export class AddTodoSuccess implements Action {

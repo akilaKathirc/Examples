@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,10 +28,11 @@ import { TemplateBindingsComponent } from './template-bindings/template-bindings
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,
     StoreModule.forRoot(
       // { todos: reducer },
-      {totodooo: ngrxreducer}),
+      { totodooo: ngrxreducer }),
     EffectsModule.forRoot([TodoEffects, ngrxEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })],
   providers: [TodoService],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
