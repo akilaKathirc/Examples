@@ -29,6 +29,9 @@ export enum TodoActionTypes {
     RR_EW_TODO = 'RR_EW_TODO',
     RR_EW_TODO_SUCCEESS = 'RR_EW_TODO_SUCCEESS',
     RR_EW_TODO_FAILURE = 'RR_EW_TODO_FAILURE',
+    DFRR_EW_TODO = 'DFRR_EW_TODO',
+    DFRR_EW_TODO_SUCCEESS = 'DFRR_EW_TODO_SUCCEESS',
+    DFRR_EW_TODO_FAILURE = 'DFRR_EW_TODO_FAILURE',
 }
 
 export class GetTodo implements Action {
