@@ -5,6 +5,7 @@ import { NeonButtonComponent } from './neon-button/neon-button.component';
 import { NgrxNewComponent } from './ngrx-new/ngrx-new.component';
 import { PseudoElementsComponent } from './pseudo-elements/pseudo-elements.component';
 import { RxjsOperatorsComponent } from './rxjs/rxjs-operators/rxjs-operators.component';
+import { TemplateBindingsComponent } from './template-bindings/template-bindings.component';
 import { ViewChildrenComponent } from './view-children/view-children.component';
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'pseudo', component: PseudoElementsComponent },
   { path: 'glass', component: GlassMorphismComponent },
   { path: 'view', component: ViewChildrenComponent },
-  { path: 'rxjs', component: RxjsOperatorsComponent }
+  { path: 'rxjs', component: RxjsOperatorsComponent },
+  {path:'temp', component:TemplateBindingsComponent}
 ];
 
 @NgModule({

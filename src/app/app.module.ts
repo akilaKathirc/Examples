@@ -21,9 +21,10 @@ import { NgrxNewComponent } from './ngrx-new/ngrx-new.component';
 import { ngrxEffects } from './ngrx-new/store/ngrxnew.effects';
 import { ngrxreducer } from './ngrx-new/store/ngrxnew.reducers';
 import { RxjsOperatorsComponent } from './rxjs/rxjs-operators/rxjs-operators.component';
+import { TemplateBindingsComponent } from './template-bindings/template-bindings.component';
 
 @NgModule({
-  declarations: [AppComponent, NeonButtonComponent, NgrxComponent, PseudoElementsComponent, GlassMorphismComponent, ViewChildrenComponent, NgrxNewComponent, RxjsOperatorsComponent],
+  declarations: [AppComponent, NeonButtonComponent, NgrxComponent, PseudoElementsComponent, GlassMorphismComponent, ViewChildrenComponent, NgrxNewComponent, RxjsOperatorsComponent, TemplateBindingsComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,
     StoreModule.forRoot(
       // { todos: reducer },

@@ -1,0 +1,37 @@
+<section>
+    <h2>{{message}}</h2>
+
+
+    <img src='../../assets/images/logoC.jpg' alt="logo">
+
+    <img src='{{imgUrl}}' alt="logo">
+
+
+    <h2>image without extension</h2>
+    <img [src]='imgUrlNoExt + ".jpg"' alt="logo">
+
+</section>
+
+
+<form [formGroup]="templateForm">
+    <div class="form-control">
+        <label for="show">Show</label>
+        <!-- here value should be in  property binding in order 
+                                        to return value in boolean.otherwise it will be a string-->
+        <input type="radio" id="show" formControlName="showhideControl" [value]="true">
+    </div>
+    <div class="form-control">
+        <label for="hide">Hide</label>
+        <input type="radio" id="hide" formControlName="showhideControl" [value]="false">
+    </div>
+
+    <h2> {{templateForm.get('showhideControl').value}}</h2>
+
+    <h2 *ngIf="templateForm.value.showhideControl">
+        <blockquote>
+            Show and hide based on above radio values
+        </blockquote>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Quos mollitia ipsa praesentium eos minima perferendis sunt autem, nulla illum repudiandae?
+    </h2>
+</form>
