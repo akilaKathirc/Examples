@@ -1,8 +1,6 @@
 <div class="button-animations">
 
-
-
-    <div class="button-controls1">
+    <div class="button-controls">
         <a data-text="Hover Effects">
             <span>T</span>
             <span>H</span>
@@ -13,10 +11,35 @@
         </a>
     </div>
 
+    <div class="button-controls" [ngStyle]="{backgroundColor: NGStyle? 'red' : 'blue'}">
+        <button class="type1 button">Effect One</button>
+    </div>
 
+    <div class="button-controls">
+        <button class="button type2" [ngClass]="{fine: count % 2 === 0}">Effect Two</button>
+    </div>
 
-    <div class="button-controls2"><a href="javascript:void(0);" class="btn">Lorem ipsum dolor sit amet.</a></div>
-    <div class="button-controls3"><a href="javascript:void(0);" class="btn"></a></div>
-    <div class="button-controls4"><a href="javascript:void(0);" class="btn"></a></div>
-    <div class="button-controls5"><a href="javascript:void(0);" class="btn"></a></div>
+    <div class="button-controls">
+        <button class="button type3">Effect Three</button>
+    </div>
+    <div class="button-controls">
+        <button class="button type4">Effect Four</button>
+    </div>
+    <div class="button-controls">
+        <button class="button type5">Effect Five</button>
+    </div>
+
+    <div class="button-controls">
+        <button class="button type5" (click)="ChangeCssClass()">Ng Class</button>
+
+    </div>
+
+    <div class="button-controls">
+        <button class="button type5" (click)="ChangeCssStyle()">Ng Style</button>
+    </div>
+
+    <div class="container">
+        <div class="box rotate" appHoverEffect></div>
+    </div>
+
 </div>

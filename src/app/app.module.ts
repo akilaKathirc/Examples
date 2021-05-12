@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,14 +24,19 @@ import { RxjsOperatorsComponent } from './rxjs/rxjs-operators/rxjs-operators.com
 import { TemplateBindingsComponent } from './template-bindings/template-bindings.component';
 import { JugglingTextDirective } from './shared/juggling/juggling-text.directive';
 import { ButtonHoverComponent } from './button-hover/button-hover.component';
+import { HoverEffectDirective } from './shared/hover/hover-effect.directive';
 
 @NgModule({
   declarations: [AppComponent, NeonButtonComponent, NgrxComponent, PseudoElementsComponent,
-    GlassMorphismComponent, ViewChildrenComponent, NgrxNewComponent, RxjsOperatorsComponent, TemplateBindingsComponent, JugglingTextDirective, ButtonHoverComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,
-    StoreModule.forRoot(
-      // { todos: reducer },
-      { totodooo: ngrxreducer }),
+    GlassMorphismComponent, ViewChildrenComponent, NgrxNewComponent, RxjsOperatorsComponent, TemplateBindingsComponent,
+    JugglingTextDirective, ButtonHoverComponent, HoverEffectDirective],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    StoreModule.forRoot({ totodooo: ngrxreducer }),
     EffectsModule.forRoot([TodoEffects, ngrxEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })],
   providers: [TodoService],
