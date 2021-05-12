@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ButtonHoverComponent } from './button-hover/button-hover.component';
 import { GlassMorphismComponent } from './glass-morphism/glass-morphism.component';
 import { NeonButtonComponent } from './neon-button/neon-button.component';
 import { NgrxNewComponent } from './ngrx-new/ngrx-new.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'glass', component: GlassMorphismComponent },
   { path: 'view', component: ViewChildrenComponent },
   { path: 'rxjs', component: RxjsOperatorsComponent },
-  {path:'temp', component:TemplateBindingsComponent}
+  { path: 'temp', component: TemplateBindingsComponent },
+  { path: 'buttonhover', component: ButtonHoverComponent }
 ];
 
 @NgModule({

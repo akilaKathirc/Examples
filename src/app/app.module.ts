@@ -22,9 +22,12 @@ import { ngrxEffects } from './ngrx-new/store/ngrxnew.effects';
 import { ngrxreducer } from './ngrx-new/store/ngrxnew.reducers';
 import { RxjsOperatorsComponent } from './rxjs/rxjs-operators/rxjs-operators.component';
 import { TemplateBindingsComponent } from './template-bindings/template-bindings.component';
+import { JugglingTextDirective } from './shared/juggling/juggling-text.directive';
+import { ButtonHoverComponent } from './button-hover/button-hover.component';
 
 @NgModule({
-  declarations: [AppComponent, NeonButtonComponent, NgrxComponent, PseudoElementsComponent, GlassMorphismComponent, ViewChildrenComponent, NgrxNewComponent, RxjsOperatorsComponent, TemplateBindingsComponent],
+  declarations: [AppComponent, NeonButtonComponent, NgrxComponent, PseudoElementsComponent,
+    GlassMorphismComponent, ViewChildrenComponent, NgrxNewComponent, RxjsOperatorsComponent, TemplateBindingsComponent, JugglingTextDirective, ButtonHoverComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,
     StoreModule.forRoot(
       // { todos: reducer },
